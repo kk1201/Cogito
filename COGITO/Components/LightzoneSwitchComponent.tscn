@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dco40qu1ugdhs"]
+
+[ext_resource type="Script" path="res://COGITO/Components/LightzoneSwitchComponent.gd" id="1_ehcva"]
+
+[node name="LightzoneSwitchComponent" type="Node"]
+editor_description = "An extension component for LightzoneComponent.
+
+Parent an instance of this component to a LightzoneComponent, connect a switch's signal to _on_switched(is_on), and the parent Lightzone will activate and deactivate based on is_on value."
+script = ExtResource("1_ehcva")

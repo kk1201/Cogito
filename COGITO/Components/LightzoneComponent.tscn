@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://ctr7n0w3hgys7"]
+[gd_scene load_steps=4 format=3 uid="uid://cwxcu3u1gpijk"]
 
 [ext_resource type="Script" path="res://COGITO/Components/LightzoneComponent.gd" id="1_ga3m3"]
-[ext_resource type="Script" path="res://COGITO/Components/LightzoneSwitchComponent.gd" id="2_5rlei"]
+[ext_resource type="PackedScene" uid="uid://dco40qu1ugdhs" path="res://COGITO/Components/LightzoneSwitchComponent.tscn" id="2_8btre"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_t8ref"]
 radius = 1.5
@@ -12,8 +12,7 @@ script = ExtResource("1_ga3m3")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_t8ref")
 
-[node name="LightzoneSwitchComponent" type="Node" parent="."]
-script = ExtResource("2_5rlei")
+[node name="LightzoneSwitchComponent" parent="." instance=ExtResource("2_8btre")]
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
